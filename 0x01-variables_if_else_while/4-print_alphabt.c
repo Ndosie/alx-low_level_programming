@@ -17,10 +17,11 @@ int main(void)
 		{
 			continue;
 		}
-
-		putchar(alphabet);
+		else
+		{
+			putchar(alphabet);
+		}
 		alphabet++;
-
 	}
 
 	putchar('\n');
