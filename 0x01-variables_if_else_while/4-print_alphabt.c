@@ -13,13 +13,8 @@ int main(void)
 
 	while (alphabet <= 'z')
 	{
-		if (alphabet == 'e')
+		if (alphabet == 'e' || alphabet == 'q')
 		{
-			continue;
-		}
-		else if (alphabet == 'q')
-		{
-			continue;
 		}
 		else
 		{
