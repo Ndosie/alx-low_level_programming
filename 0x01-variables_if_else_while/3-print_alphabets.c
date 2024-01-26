@@ -25,6 +25,6 @@ int main(void)
 		capital++;
 	}
 
-	putchar('$\n');
+	putchar('\n');
 	return (0);
 }
