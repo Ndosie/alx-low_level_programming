@@ -1,12 +1,21 @@
 #include <stdio.h>
+#include <main.h>
 
 /**
- * main - Prints string
+ * main - Calls a function that prints
  *
- * Return: Zero
+ * Return: Always zero
  */
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
