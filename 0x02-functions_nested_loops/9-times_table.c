@@ -28,10 +28,14 @@ voide time_table(void)
 			{
 				_putchar(m + '0');
 			}
-			_putchar(',');
-			_putchar(' ');
+			if (c != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			c++;
 		}
+		_putchar(';');
 		_putchar('\n');
 		r++;
 	}
