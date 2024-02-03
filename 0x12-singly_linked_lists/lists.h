@@ -1,3 +1,6 @@
+#ifndef LINKED_LIST
+#define LINKED_LIST
+
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -15,3 +18,5 @@ typedef struct list_s
 
 int _putchar(char c);
 size_t print_list(const list_t *h);
+
+#endif
