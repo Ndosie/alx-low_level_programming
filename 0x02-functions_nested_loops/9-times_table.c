@@ -31,23 +31,14 @@ void times_table(void)
 			if (c != 9)
 			{
 				_putchar(',');
-				if (m > 9)
+				_putchar(' ');
+				if (m < 9)
 				{
 					_putchar(' ');
 				}
-				else
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-			}
-			else
-			{
-				_putchar('$');
 			}
 			c++;
 		}
-		_putchar(';');
 		_putchar('\n');
 		r++;
 	}
