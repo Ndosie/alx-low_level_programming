@@ -5,7 +5,7 @@
  *
  * Return: Void
  */
-voide time_table(void)
+void time_table(void)
 {
 	int r;
 	int c;
@@ -31,7 +31,19 @@ voide time_table(void)
 			if (c != 9)
 			{
 				_putchar(',');
-				_putchar(' ');
+				if (m > 9)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+			}
+			else
+			{
+				_putchar('$');
 			}
 			c++;
 		}
