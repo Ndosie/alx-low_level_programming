@@ -13,10 +13,10 @@ void times_table(void)
 
 	r = 0;
 
-	while (r < 10)
+	while (r <= 9)
 	{
 		c = 0;
-		while (c < 10)
+		while (c <= 9)
 		{
 			m = r * c;
 			if (m > 9)
