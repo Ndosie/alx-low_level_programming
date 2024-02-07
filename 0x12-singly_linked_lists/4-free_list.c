@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include 'lists.h'
+#include "lists.h"
 
 /**
  * free_list - frees the memory of linked list
