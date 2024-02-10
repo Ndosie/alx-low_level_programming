@@ -1,5 +1,25 @@
-#include <math.h>
 #include "main.h"
+
+/**
+ * power - raises 2 to power
+ * @p: power to raise
+ *
+ * Return: power
+ */
+
+unsigned int power(int p)
+{
+	unsigned int sum;
+
+	sum = 1;
+
+	while (p > 0)
+	{
+		sum *= 2;
+		p--;
+	}
+	return (sum);
+}
 
 /**
  * binary_to_uint - converts binary number to integer
@@ -9,7 +29,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int sum;
+	unsigned int sum;
 	int counter;
 
 	sum = 0;
@@ -25,7 +45,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		if (*b == '1')
-			sum += pow(2, counter);
+			sum += power(counter);
 		counter--;
 		*b++;
 	}
