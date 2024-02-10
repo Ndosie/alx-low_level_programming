@@ -1,3 +1,4 @@
+#include <math.h>
 #include "main.h"
 
 /**
@@ -9,23 +10,22 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int sum;
-	int len;
 	int counter;
 
 	sum = 0;
-	len = strlen(*b);
-	counter = len - 1;
+	counter = strlen(*b) - 1;
 
 
-	if (b == NULL)
+	if (*b == NULL)
 		return (0);
 
 	while (*b)
 	{
-		if (*b != 0 && *b != 1)
+		if (*b != '0' && *b != '1')
 			return (0);
 
-		sum += 2 ^ counter;
+		if (*b == '1')
+			sum += pow(2, counter);
 		counter--;
 		*b++;
 	}
