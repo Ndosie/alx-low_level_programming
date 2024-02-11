@@ -30,26 +30,25 @@ unsigned int power(int p)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum;
-	int counter;
+	int i;
 	int len;
 
 	sum = 0;
-	len = strlen(*b);
-	counter = len - 1;
+	len = (int)strlen(b);
+	i = 0;
 
 
 	if (b == NULL)
 		return (0);
 
-	while (*b)
+	while (i < len)
 	{
-		if (*b != '0' && *b != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
-		if (*b == '1')
-			sum += power(counter);
-		counter--;
-		++*b;
+		if (b[i] == '1')
+			sum += power((len - 1) - i);
+		i++;
 	}
 
 	return (sum);
