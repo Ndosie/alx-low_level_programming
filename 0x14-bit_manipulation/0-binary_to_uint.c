@@ -38,7 +38,7 @@ unsigned int binary_to_uint(const char *b)
 	i = 0;
 
 
-	if (b == NULL)
+	if (*b == NULL)
 		return (0);
 
 	while (i < len)
