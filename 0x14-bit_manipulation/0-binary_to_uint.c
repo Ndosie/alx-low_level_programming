@@ -31,13 +31,15 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum;
 	int counter;
+	int len;
 
 	sum = 0;
-	counter = strlen(*b) - 1;
+	len = strlen(*b);
+	counter = len - 1;
 
 
-//	if (b == NULL)
-//		return (0);
+	if (b == NULL)
+		return (0);
 
 	while (*b)
 	{
@@ -47,7 +49,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*b == '1')
 			sum += power(counter);
 		counter--;
-		*b++;
+		++*b;
 	}
 
 	return (sum);
