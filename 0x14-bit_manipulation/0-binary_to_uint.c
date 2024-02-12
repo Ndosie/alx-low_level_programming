@@ -1,27 +1,6 @@
 #include "main.h"
 
 /**
- * power - raises 2 to power
- * @p: power to raise
- *
- * Return: power
- */
-
-unsigned int power(int p)
-{
-	unsigned int sum;
-
-	sum = 1;
-
-	while (p > 0)
-	{
-		sum *= 2;
-		p--;
-	}
-	return (sum);
-}
-
-/**
  * binary_to_uint - converts binary number to integer
  * @b: number to convert
  *
@@ -47,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		if (b[i] == '1')
-			sum += power((len - 1) - i);
+			sum += 1 << ((len - 1) - i);
 		i++;
 	}
 
