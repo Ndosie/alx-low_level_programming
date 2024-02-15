@@ -2,8 +2,10 @@
 
 /**
  * main - FizzBuzz program
+ *
+ * Return: zero
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -13,10 +15,12 @@ void main(void)
 			printf("%s ", "FizzBuzz");
 		else if (i % 3 == 0)
 			printf("%s ", "Fizz");
-		else if(i % 5 == 0)
+		else if (i % 5 == 0)
 			printf("%s ", "Buzz");
 		else
 			printf("%d ", i);
 	}
 	printf("\n");
+
+	return (0);
 }
