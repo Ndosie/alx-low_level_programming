@@ -11,7 +11,7 @@ void close_file(ssize_t fd)
 	c = close(fd);
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %ld", fd);
 		exit(100);
 	}
 }
