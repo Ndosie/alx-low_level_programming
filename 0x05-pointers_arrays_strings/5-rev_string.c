@@ -7,15 +7,21 @@
  */
 void rev_string(char *s)
 {
-	char *o;
+	char o[((int)strlen(s))];
 	int i;
 	int j;
 
-	o = " ";
-	strcpy(o, s);
 	i = ((int)strlen(s)) - 1;
-	j = i;
+	j = 0;
 
+	while (*s)
+	{
+		o[j] = *s;
+		*(s++);
+		j++;
+	}
+
+	j = i;
 	while (i >= 0)
 	{
 		s[j - i] = o[i];
