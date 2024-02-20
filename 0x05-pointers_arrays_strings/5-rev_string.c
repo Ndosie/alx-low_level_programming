@@ -11,6 +11,7 @@ void rev_string(char *s)
 	int i;
 	int j;
 
+	o = s;
 	strcpy(o, s);
 	i = ((int)strlen(s)) - 1;
 	j = i;
