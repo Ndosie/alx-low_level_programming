@@ -9,13 +9,18 @@ void puts_half(char *str)
 {
 	int i;
 	int l;
+	int n;
 
 	l = (int)strlen(str);
 
 	if (l % 2 == 0)
 		i = l / 2;
 	else
-		i = (l - 1) / 2;
+	{
+		n = (l - 1) / 2;
+		i = l - n;
+	}
+
 
 	while (i < l)
 	{
