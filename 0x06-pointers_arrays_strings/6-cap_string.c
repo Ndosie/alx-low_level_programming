@@ -14,20 +14,18 @@ char *cap_string(char *s)
 		'!', '?', '"', '(', ')', '{', '}'};
 
 	i = 0;
-	s[i] = s[i] - 32;
 
 	while (s[i])
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-		{
-			for (j = 0; j < 13; j++)
-			{
-				if (spec[j] == s[i - 1])
-				{
-					s[i] = s[i] - 32;
-					break;
-				}
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
+		for (j = 0; j < 13; j++)
+		{
+			if (spec[j] == s[i])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+					s[i + 1] -= 32;
 			}
 		}
 		i++;
