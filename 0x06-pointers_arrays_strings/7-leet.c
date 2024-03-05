@@ -19,7 +19,7 @@ char *leet(char *s)
 		for (j = 0; j < 5; j++)
 		{
 			if (a[j] == s[i] || b[j] == s[i])
-				s[i] = n[j];
+				s[i] = n[j] + '0';
 		}
 		i++;
 	}
