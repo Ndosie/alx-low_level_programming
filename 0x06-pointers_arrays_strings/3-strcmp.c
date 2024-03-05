@@ -23,8 +23,9 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-
-	if (s2[i])
+	
+	if (r == 0 && s2[i] != '\0')
 		r = s2[i];
+
 	return (r);
 }
