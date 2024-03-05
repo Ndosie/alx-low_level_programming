@@ -10,16 +10,25 @@ char *cap_string(char *s)
 {
 	int i;
 	int j;
+	char spec[] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
 
 	i = 0;
+	s[i] = s[i] - 32;
 
 	while (s[i])
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			j = s[i - 1];
-			if ((j >= 9 && j <= 47) || (j >= 58 && j <= 64))
-				s[i] = s[i] - 32;
+			for (j = 0; j < 13; j++)
+			{
+				if (spec[j] == s[i - 1])
+				{
+					s[i] = s[i] - 32;
+					break;
+				}
+
+			}
 		}
 		i++;
 	}
