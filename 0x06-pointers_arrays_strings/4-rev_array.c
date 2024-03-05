@@ -7,18 +7,19 @@
  */
 void reverse_array(int *a, int n)
 {
-	int *temp;
+	int temp;
 	int i;
+	int j;
 
-	temp = malloc(sizeof(a));
-	temp = a;
 	i = 0;
+	j = n - 1;
 
-	while (n >= 0)
+	while (n / 2)
 	{
-		a[i] = temp[n];
-		n--;
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 		i++;
+		j--;
 	}
-	free(temp);
 }
