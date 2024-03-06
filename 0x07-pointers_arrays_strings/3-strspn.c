@@ -13,13 +13,10 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*accept)
 	{
-		while (*s)
+		while (*s != 32)
 		{
 			if (*accept == *s)
-			{
 				l++;
-				break;
-			}
 			s++;
 		}
 		accept++;
