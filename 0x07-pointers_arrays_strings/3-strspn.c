@@ -10,14 +10,16 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int l = 0;
+	int i;
 
 	while (*accept)
 	{
-		while (*s != 32)
+		i = 0;
+		while (s[i] != 32)
 		{
-			if (*accept == *s)
+			if (*accept == s[i])
 				l++;
-			s++;
+			i++;
 		}
 		accept++;
 	}
