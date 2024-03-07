@@ -13,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int i;
 	unsigned int j = 0;
 
-	if (*needle == "")
+	if (*needle == '\0')
 		return haystack;
 
 	while (*needle)
@@ -34,6 +34,7 @@ char *_strstr(char *haystack, char *needle)
 					haystack++;
 				}
 			}
+			printf
 			if (l == j)
 				return (haystack - j);
 		}
