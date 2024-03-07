@@ -13,6 +13,9 @@ char *_strstr(char *haystack, char *needle)
 	int i;
 	unsigned int j = 0;
 
+	if (*needle == "")
+		return haystack;
+
 	while (*needle)
 	{
 		l++;
