@@ -1,17 +1,5 @@
+#include <stdio.h>
 #include "main.h"
-
-/**
- * print_int - prints integer with putchar function
- * @n: integer to print
- */
-void print_int(int n)
-{
-	if (n / 10)
-		print_int(n / 10);
-
-	_putchar(n % 10 + '0');
-}
-
 
 /**
  * print_diagsums - sums array diagonally and print its sums
@@ -36,9 +24,5 @@ void print_diagsums(int *a, int size)
 		}
 	}
 
-	print_int(s1);
-	_putchar(',');
-	_putchar(' ');
-	print_int(s2);
-	_putchar('\n');
+	printf("%d, %d\n", s1, s2);
 }
