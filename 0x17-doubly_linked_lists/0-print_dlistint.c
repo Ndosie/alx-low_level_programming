@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint - counts the number of elements in the doubly linked list
+ * print_dlistint - prints the elements in the doubly linked list
  * @h: pointer to the head of a list
  *
  * Return: number of elements
