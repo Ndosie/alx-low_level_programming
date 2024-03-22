@@ -21,6 +21,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		org = org->next;
 		org->next->prev = NULL;
+		return (1);
 	}
 	else
 	{
@@ -39,10 +40,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 					org->next = org->next->next;
 					org->next->next->prev = org;
 				}
+				return (1);
 			}
 			i++;
 			org = org->next;
 		}
 	}
-	return (1);
+	return (-1);
 }
