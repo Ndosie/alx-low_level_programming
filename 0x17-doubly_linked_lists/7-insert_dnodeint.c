@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#incude "lists.h"
+#include "lists.h"
 
 /**
  * insert_dnodeint_at_index - inserts double node at index
@@ -11,23 +11,40 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	dlistint_t *new, *prev;
+	unsigned int i;
+	dlistint_t *new, *org;
 
-	new = malloc(sizeof(dlistint_t));
-	if (!new)
-		return (NULL);
+	new = NULL;
 
-	new->n = n;
-
-	while (*head)
+	if (idx == 0)
 	{
-		if (i == index)
-		{
-			new->next = *head;
-		}
-		i++;
-		head =
+		new = add_dnodeint(h, n);
 	}
-	return (NULL);
+	else
+	{
+		i = 1;
+		org = *h;
+
+		while (org)
+		{
+			if (i == idx)
+			{
+				if (org->next == NULL)
+					new = add_dnodeint_end(h, n);
+				else
+				{
+					new = malloc(sizeof(dlistint_t));
+					new->n = n;
+					org->prev->next = new;
+					new->prev = org->prev;
+					new->next = org;
+					org->prev = new;
+				}
+				break;
+			}
+			i++;
+			org = org->next;
+		}
+	}
+	return (new);
 }
