@@ -22,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 	{
-		i = 0;
+		i = 1;
 		org = *h;
 
 		while (org)
@@ -35,10 +35,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				{
 					new = malloc(sizeof(dlistint_t));
 					new->n = n;
-					org->prev->next = new;
-					new->prev = org->prev;
-					new->next = org;
-					org->prev = new;
+					new->next = org->next;
+					org->next->prev = new;
+					org->next = new;
+					new->prev = org;
 				}
 				break;
 			}
