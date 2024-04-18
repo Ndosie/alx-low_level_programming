@@ -22,6 +22,7 @@ void free_recursively(hash_node_t *item)
  */
 void hash_table_delete(hash_table_t *ht)
 {
+	hash_table_t *h = ht
 	unsigned long int i;
 	hash_node_t *item;
 
@@ -42,7 +43,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(item);
 		}
 	}
-	free(ht->array);
-	free(ht);
+	free(h->array);
+	free(h);
 
 }
