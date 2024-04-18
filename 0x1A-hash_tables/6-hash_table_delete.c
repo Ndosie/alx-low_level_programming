@@ -42,5 +42,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(item);
 		}
 	}
+	free(ht->array);
+	free(ht);
 
 }
